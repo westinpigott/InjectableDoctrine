@@ -36,8 +36,9 @@ abstract class AbstractRepository extends DocumentRepository implements Reposito
      * 
      * @return mixed
      */
-    public function createNewObject() {
-        $className = $this->getClassName();
+    public function createNewObject($className = NULL) {
+        if (is_null($className))
+            $className = $this->getClassName();
         $object = new $className();
         $event = new DoctrineObjectInstantiationEvent($object);
         $this->getEventDispatcher()->dispatch(DoctrineObjectInstantiationEvent::EVENT_INSTANTIATE_OBJECT, $event);
