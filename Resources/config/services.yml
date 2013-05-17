@@ -1,0 +1,7 @@
+services:
+  wrp.injectable_doctrine.on_load_listener:
+    class: WRP\InjectableDoctrine\Listener\OnLoadListener
+    arguments:
+      - "@event_dispatcher"      
+    tags:
+      - { name: doctrine_mongodb.odm.event_listener, event: postLoad }

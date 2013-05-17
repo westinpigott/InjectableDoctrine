@@ -1,0 +1,32 @@
+{
+    "name": "wrp/injectable-doctrine",
+    "type": "symfony-bundle",
+    "description": "Allows you to inject dependencies into your doctrine objects seamlessly.",
+    "keywords": ["doctrine", "inject", "dependency"],
+    "homepage": "https://github.com/westinpigott/InjectableDoctrine",
+    "license": "Apache2",
+    "authors": [
+        {
+            "name": "Westin Pigott",
+            "email": "westinpigott@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/symfony": ">=2.2.0",
+        "doctrine/mongodb-odm": ">=1.0.0-BETA8",
+    },
+    "require-dev": {
+        "doctrine/mongodb-odm-bundle": "*"        
+    },
+    "autoload": {
+        "psr-0": { "WRP\\InjectableDoctrineBundle": "" }
+    },
+    "minimum-stability": "dev",
+    "target-dir": "WRP/InjectableDoctrineBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
