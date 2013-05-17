@@ -52,7 +52,7 @@ class DocumentManager extends ORM_DocumentManager implements EventDispatcherAwar
 
         //check if it implements EventDispatcherAware
         if ($repository instanceof EventDispatcherAware)
-            $repository->injectEventDispatcher($this->getEventDispatcher());
+            $repository->setEventDispatcher($this->getEventDispatcher());
 
         return $repository;
     }
