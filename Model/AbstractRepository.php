@@ -15,7 +15,7 @@ use \Exception as Exception;
  *
  * @author Westin Pigott
  */
-abstract class AbstractRepository extends DocumentRepository implements RepositoryInterface, EventDispatcherAware {
+abstract class AbstractRepository extends DocumentRepository implements RepositoryInterface {
 
     private $eventDispatcher;
 

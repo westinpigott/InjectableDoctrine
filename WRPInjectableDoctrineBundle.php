@@ -6,6 +6,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use WRP\InjectableDoctrine\DependencyInjection\Compiler\OverRideServiceCompilerPass;
+use WRP\InjectableDoctrine\DependencyInjection\InjectableDoctrineExtension;
 
 class WRPInjectableDoctrineBundle extends Bundle {
 
