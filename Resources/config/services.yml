@@ -1,3 +1,6 @@
+parameters:
+    doctrine_mongodb.odm.document_manager.class: WRP\InjectableDoctrine\Model\DocumentManager
+
 services:
   wrp.injectable_doctrine.on_load_listener:
     class: WRP\InjectableDoctrine\Listener\OnLoadListener
