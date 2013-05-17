@@ -20,10 +20,10 @@
         "doctrine/mongodb-odm-bundle": "*"        
     },
     "autoload": {
-        "psr-0": { "WRP\\InjectableDoctrineBundle": "" }
+        "psr-0": { "WRP\\InjectableDoctrine": "" }
     },
     "minimum-stability": "dev",
-    "target-dir": "WRP/InjectableDoctrineBundle",
+    "target-dir": "WRP/InjectableDoctrine",
     "extra": {
         "branch-alias": {
             "dev-master": "0.1-dev"
