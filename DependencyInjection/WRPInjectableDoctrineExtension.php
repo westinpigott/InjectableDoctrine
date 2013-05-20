@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\Reference;
 /**
  * Description of WRPInjectableDoctrineExtension
  *
- * @author wpigott
+ * @author Westin Pigott
  */
 class WRPInjectableDoctrineExtension extends Extension {
 
