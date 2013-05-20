@@ -14,7 +14,7 @@ class WRPInjectableDoctrineBundle extends Bundle {
     public function build(ContainerBuilder $container) {
         parent::build($container);
         $container->addCompilerPass(new DefineListenerCompilerPass(), PassConfig::TYPE_OPTIMIZE);
-        $container->addCompilerPass(new OverRideServiceCompilerPass(), PassConfig::TYPE_AFTER_REMOVING);
+        //$container->addCompilerPass(new OverRideServiceCompilerPass(), PassConfig::TYPE_AFTER_REMOVING);
     }
 
 }
