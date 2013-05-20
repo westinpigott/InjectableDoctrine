@@ -3,7 +3,7 @@
 namespace WRP\InjectableDoctrine\Event;
 
 use Symfony\Component\EventDispatcher\Event;
-use \Exception as Exception;
+use WRP\InjectableDoctrine\Exceptions\InjectableDoctrineException;
 
 /**
  * Description of DoctrineObjectInstantiationEvent
@@ -18,7 +18,7 @@ class DoctrineObjectInstantiationEvent extends Event {
 
     public function __construct($object) {
         if (!is_object($object))
-            throw new Exception('Must be a valid object.');
+            throw new InjectableDoctrineException('Must be a valid object.');
         $this->object = $object;
     }
 

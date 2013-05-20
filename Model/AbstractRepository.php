@@ -8,7 +8,7 @@ use Doctrine\ODM\MongoDB\DocumentRepository;
 use WRP\InjectableDoctrine\Event\DoctrineObjectInstantiationEvent;
 use WRP\InjectableDoctrine\Interfaces\EventDispatcherAware;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-use \Exception as Exception;
+use WRP\InjectableDoctrine\Exceptions\InjectableDoctrineException;
 
 /**
  * Description of AbstractRepository
@@ -28,7 +28,7 @@ abstract class AbstractRepository extends DocumentRepository implements Reposito
      */
     protected function getEventDispatcher() {
         if (!($this->eventDispatcher instanceof EventDispatcherInterface))
-            throw new Exception('Event Dispatcher must be injected using setEventDispatcher prior to use.');
+            throw new InjectableDoctrineException('Event Dispatcher must be injected using setEventDispatcher prior to use.');
         return $this->eventDispatcher;
     }
 

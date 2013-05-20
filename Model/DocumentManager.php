@@ -8,7 +8,7 @@ use Doctrine\Common\EventManager;
 use Doctrine\MongoDB\Connection;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use WRP\InjectableDoctrine\Interfaces\EventDispatcherAware;
-use \Excepton as Exception;
+use WRP\InjectableDoctrine\Exceptions\InjectableDoctrineException;
 
 /**
  * Description of DocumentManager
@@ -29,7 +29,7 @@ class DocumentManager extends ORM_DocumentManager implements EventDispatcherAwar
      */
     protected function getEventDispatcher() {
         if (!($this->eventDispatcher instanceof EventDispatcherInterface))
-            throw new Exception('Event Dispatcher must be injected using setEventDispatcher prior to use.');
+            throw new InjectableDoctrineException('Event Dispatcher must be injected using setEventDispatcher prior to use.');
         return $this->eventDispatcher;
     }
 
